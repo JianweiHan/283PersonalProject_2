@@ -53,7 +53,7 @@ public class MyThread extends Thread {
             dBCollectionlocal.insert(((DBObject) JSON.parse(obj.toString())));
             try {
                 //write to mongodb replica
-                WriteResult result = dBCollection.insert(((DBObject) JSON.parse(obj2.toString())),WriteConcern.ACKNOWLEDGED);
+                WriteResult result = dBCollection.insert(((DBObject) JSON.parse(obj2.toString())),WriteConcern.MAJORITY);
 
                 // System.out.println("[ThreadID " + this.threadId+ "] " + i+" count: "+count+"  writeResult : " + result.wasAcknowledged()+ result.getN()+"  "+ result.toString());
 
