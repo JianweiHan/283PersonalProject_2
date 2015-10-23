@@ -47,7 +47,7 @@ public class MyThread extends Thread {
 
             // WriteResult result =new WriteResult(0,false,null);
             //System.out.println("writeResult : " + result.wasAcknowledged()+ result.getN()+"  "+ result.toString()) ;
-            System.out.println(count);
+            System.out.println(i);
 
             //write to local mongodb for logging
             dBCollectionlocal.insert(((DBObject) JSON.parse(obj.toString())));
